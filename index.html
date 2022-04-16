@@ -1,403 +1,157 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>feiyingdai9527</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="feiyingdai9527">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="feiyingdai9527">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'feiyingdai9527',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-04-16 23:28:30'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.1.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-linux常用命令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time class="dt-published" datetime="2022-04-16T14:53:00.000Z" itemprop="datePublished">2022-04-16</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">linux常用命令</a>
-    </h1>
-  
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">feiyingdai9527</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">feiyingdai9527</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux常用命令"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-04-16T14:53:00.000Z" title="Created 2022-04-16 22:53:00">2022-04-16</time></span></div><div class="content">1.操作目录cdcd：切换目录
+cd &#x2F;   #进入到系统根目录
+cd .   #进入到当前目录
+cd ..  #返回上层目录
+cd  &#x2F;tmp  #进入指定目录&#x2F;tmp
+cd ~  #进入当前用户的家目录
+2.查看文件lsls：列出当前目录的所有文件、文件夹（目录）信息；
+-l 列出目录或者文件的详细信息。比如权限、修改时间等等； 
+-a 列出当前目录下所有文件，包括隐藏文件（已点开头的都是隐藏文件）；
+-A 列出除.和..之外的所有文件； 
+-h 列出文件的大小； 
+12345678910ls /tmp   # 显示指定目录/tmp 的内容ls -l   # 列出文件和文件夹的基本属性和详细信息ls -a  #列出当前目录的全部内容ls -help #列出ls命令的帮助内容ls coco*  #列出以coco开头的文件和文件夹ll  #列出文件和文件夹的基本属性和详细信息
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="1-操作目录cd"><a href="#1-操作目录cd" class="headerlink" title="1.操作目录cd"></a>1.操作目录cd</h2><p>cd：切换目录</p>
-<p>cd &#x2F;   #进入到系统根目录</p>
-<p>cd .   #进入到当前目录</p>
-<p>cd ..  #返回上层目录</p>
-<p>cd  &#x2F;tmp  #进入指定目录&#x2F;tmp</p>
-<p>cd ~  #进入当前用户的家目录</p>
-<h2 id="2-查看文件ls"><a href="#2-查看文件ls" class="headerlink" title="2.查看文件ls"></a>2.查看文件ls</h2><p>ls：列出当前目录的所有文件、文件夹（目录）信息；</p>
-<p>-l 列出目录或者文件的详细信息。比如权限、修改时间等等； </p>
-<p>-a 列出当前目录下所有文件，包括隐藏文件（已点开头的都是隐藏文件）；</p>
-<p>-A 列出除.和..之外的所有文件； </p>
-<p>-h 列出文件的大小； </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> /tmp   <span class="comment"># 显示指定目录/tmp 的内容</span></span><br><span class="line"><span class="built_in">ls</span> -l   <span class="comment"># 列出文件和文件夹的基本属性和详细信息</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ls</span> -a  <span class="comment">#列出当前目录的全部内容</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ls</span> -<span class="built_in">help</span> <span class="comment">#列出ls命令的帮助内容</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ls</span> coco*  <span class="comment">#列出以coco开头的文件和文件夹</span></span><br><span class="line"></span><br><span class="line">ll  <span class="comment">#列出文件和文件夹的基本属性和详细信息</span></span><br></pre></td></tr></table></figure>
+3.列出当前目录的路径pwd1pwd  #显示当前所在目录的路径
 
-<h2 id="3-列出当前目录的路径pwd"><a href="#3-列出当前目录的路径pwd" class="headerlink" title="3.列出当前目录的路径pwd"></a>3.列出当前目录的路径pwd</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span>  <span class="comment">#显示当前所在目录的路径</span></span><br></pre></td></tr></table></figure>
+4.查看当前登录用户who1whoami #显示当前用户
 
-<h2 id="4-查看当前登录用户who"><a href="#4-查看当前登录用户who" class="headerlink" title="4.查看当前登录用户who"></a>4.查看当前登录用户who</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">whoami</span> <span class="comment">#显示当前用户</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">who</span>  <span class="comment">#显示当前系统登录用户以及所登录的控制台</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="5-复制文件或目录-x2F-文件改名cp"><a href="#5-复制文件或目录-x2F-文件改名cp" class="headerlink" title="5.复制文件或目录&#x2F;文件改名cp"></a>5.复制文件或目录&#x2F;文件改名cp</h2><p>cp：复制文件或目录；</p>
-<p><strong>常用参数：</strong></p>
-<table>
-<thead>
-<tr>
-<th>-f</th>
-<th>若目标文件已存在，则会直接覆盖原文件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-i</td>
-<td>若目标文件已存在，则会询问是否覆盖</td>
-</tr>
-<tr>
-<td>-p</td>
-<td>保留源文件或目录的所有属性</td>
-</tr>
-<tr>
-<td>-r</td>
-<td>递归复制文件和目录</td>
-</tr>
-<tr>
-<td>-b</td>
-<td>覆盖已存在的文件目标前将目标文件备份</td>
-</tr>
-<tr>
-<td>-a</td>
-<td>等价于“dpr”选项</td>
-</tr>
-</tbody></table>
-<p>-f 强制复制，不提示 ；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> vivi /tmp   <span class="comment">#复制vivi文件到/tmp 目录下</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /tmp/vivi /home      <span class="comment">#复制/tmp/vivi 文件到/home 目录下</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> -f test1 test2      <span class="comment"># 将文件test1改名为test2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> -p /tmp/coco /home     <span class="comment">#复制/tmp/coco到/home目录下并复制文件属性</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="6移动文件或目录（改名）mv"><a href="#6移动文件或目录（改名）mv" class="headerlink" title="6移动文件或目录（改名）mv"></a>6移动文件或目录（改名）mv</h2><p>mv：移动文件或目录；</p>
-<p>改名必须满足：目标位置和源位置必须相同才可以，然后文件名必须不同</p>
-<p><strong>常用参数：</strong></p>
-<table>
-<thead>
-<tr>
-<th>-i</th>
-<th>若存在同名文件，则向用户询问是否覆盖</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-f</td>
-<td>覆盖已有文件时，不进行任何提示</td>
-</tr>
-<tr>
-<td>-b</td>
-<td>当文件存在时，覆盖前为其创建一个备份</td>
-</tr>
-<tr>
-<td>-u</td>
-<td>当源文件比目标文件新，或者目标文件不存在时，才执行移动此操作</td>
-</tr>
-</tbody></table>
-<p><strong>参考实例</strong></p>
-<p>将文件file_1重命名为file_2：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> file_1 file_2</span><br></pre></td></tr></table></figure>
-
-<p>将文件file移动到目录dir中 ：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> file /dir</span><br></pre></td></tr></table></figure>
-
-<p>将目录dir1移动目录dir2中（前提是目录dir2已存在，若不存在则改名)：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> /dir1 /dir2</span><br></pre></td></tr></table></figure>
-
-<p>将目录dir1下的文件移动到当前目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> /dir1/* .</span><br></pre></td></tr></table></figure>
-
-<h2 id="7-在文件中查找关键词grep"><a href="#7-在文件中查找关键词grep" class="headerlink" title="7.在文件中查找关键词grep"></a>7.在文件中查找关键词grep</h2><p>grep：在文件中查找关键词；</p>
-<p>-v 排除内容  </p>
-<p>-E 可以同时实现两条命令的使用，当然也要加|  </p>
-<p>–color&#x3D;auto 对过滤的字符串加颜色  </p>
-<p>-i 不区分大小写  </p>
-<p>-w 按单词搜索  </p>
-<p>-B 除了显示匹配的一行之外，并显示该行之前的 N 行  </p>
-<p>-A 除了显示匹配的一行之外，并显示该行之后的 N 行  </p>
-<p>-C 除了显示匹配的一行之外，并显示该行之前后各 N 行  </p>
-<p>-i 不区分大小写  </p>
-<p>-o 只显示匹配到的内容  </p>
-<p>-n 显示行号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep “coco” /etc/test    <span class="comment">#在/etc/test文件中查找关键字“coco”</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="8-查找文件find"><a href="#8-查找文件find" class="headerlink" title="8.查找文件find"></a>8.查找文件find</h2><p>find：查找文件；</p>
-<p>语法：find [路径] -name [选项]</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">find <span class="built_in">test</span>*    <span class="comment">#在当前目录下查找以test开头的文件</span></span><br><span class="line"></span><br><span class="line">find /etc/test*     <span class="comment">#在/etc目录中查找以test开头的文件</span></span><br><span class="line"></span><br><span class="line">find /etc/test* -<span class="built_in">print</span>     <span class="comment">#在/etc目录中查找以test开头的文件，并显示出来</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="9-查看进程ps"><a href="#9-查看进程ps" class="headerlink" title="9.查看进程ps"></a>9.查看进程ps</h2><p>ps：查看进程；</p>
-<p>a 所有与终端相关的进程； </p>
-<p> x 所有与终端无关的进程； </p>
-<p>u 以用户为中心组织进程状态信息显示； </p>
-<p>o 自定义要显示的字段列表，以逗号分隔； </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ps -ef    <span class="comment">#查看进程</span></span><br><span class="line">ps -aux &gt; ps.txt   <span class="comment"># 显示所有进程，并输出到ps.txt文件</span></span><br><span class="line"></span><br><span class="line">ps -ef | grep ssh  <span class="comment"># 查找特定进程信息</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="10-结束进程kill"><a href="#10-结束进程kill" class="headerlink" title="10.结束进程kill"></a>10.结束进程kill</h2><p>kill：结束进程；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">killall 服务名     <span class="comment">#关闭服务的所有进程 </span></span><br><span class="line"><span class="built_in">kill</span> -9 进程号     <span class="comment">#强制关闭指定进程</span></span><br><span class="line"></span><br><span class="line">killall -9 服务名   <span class="comment">#强制关闭服务的所有进程</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="11-查看文件内容cat"><a href="#11-查看文件内容cat" class="headerlink" title="11.查看文件内容cat"></a>11.查看文件内容cat</h2><p>cat：查看文件内容；</p>
-<p>-n 显示行号； </p>
-<p> -b 只显示非空行的内容（显示行号）； </p>
-<p> -E 在每行结束处显示$  ；</p>
-<p>-s 压缩空行  ；</p>
-<p>-T 把 tab 键字符显示为^I ；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/coco     <span class="comment">#查看/etc/coco文件</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> /etc/coco |more     <span class="comment">#分屏查看文件内容</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> /etc/coco |less    <span class="comment">#分屏查看文件内容，可上下翻页</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="12-打包tar"><a href="#12-打包tar" class="headerlink" title="12.打包tar"></a>12.打包tar</h2><p>tar：打包；</p>
-<p>常见的文件类型为.tar.gz  .tar.bz2  .tgz  .tar.zip </p>
-<p>-c：新建打包文件 </p>
-<p>-f：这个参数后面要接文件名，建议 -f 单独写一个参数 </p>
-<p>-t：查看打包文件 </p>
-<p>-z：通过 gzip 的支持进行压缩和解压缩，此时文件名最好为：.tar.gz</p>
-<p>-x：解压缩打包文件 </p>
-<p>-r:  添加文件到已经压缩的文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf test.tar.gz/unzip test.zip      <span class="comment">#解压文件</span></span><br><span class="line"></span><br><span class="line">tar -czvf test.tar.gz <span class="built_in">test</span>/zip -r test.zip <span class="built_in">test</span>     <span class="comment">#压缩命令</span></span><br><span class="line"></span><br><span class="line">tar -t -f /tmp/etc.tar.gz        <span class="comment">#查询</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="13-查看ip地址ifconfig"><a href="#13-查看ip地址ifconfig" class="headerlink" title="13.查看ip地址ifconfig"></a>13.查看ip地址ifconfig</h2><p>ifconfig:查看ip地址；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ifconfig     <span class="comment">#查看 ip 信息 </span></span><br><span class="line"></span><br><span class="line">ifdown eth0     <span class="comment">#禁用网卡 </span></span><br><span class="line"></span><br><span class="line">ifup   eth0      <span class="comment">#启用网卡 </span></span><br><span class="line"></span><br><span class="line">ifconfig eth0 hw ether 00:11:22:33:44:55     <span class="comment">#修改网卡 eth0 的 MAC 地址</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="14-检查网络是否连通ping"><a href="#14-检查网络是否连通ping" class="headerlink" title="14.检查网络是否连通ping"></a>14.检查网络是否连通ping</h2><p>ping:检查网络是否连通；</p>
-<p>-c 指定发送的 ping 包个数  </p>
-<p> -w 指定 ping 命令超时时长  </p>
-<p>-W 一次 ping 操作中，等待对方响应的超时时长  </p>
-<p> -s 指定 ping 包报文大小 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping www.baidu.com </span><br></pre></td></tr></table></figure>
-
-<h2 id="15-创建文件夹mkdir"><a href="#15-创建文件夹mkdir" class="headerlink" title="15.创建文件夹mkdir"></a>15.创建文件夹mkdir</h2><p>mkdir :创建文件夹；</p>
-<p>-p创建层级目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ITester    <span class="comment">#在当前目录下创建ITester子目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> /tmp/ITester_coco   <span class="comment">#在指定目录/tmp下创建ITester_coco 子目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> -p coco_2/coco_3   <span class="comment">#在当前目录下创建2级目录coco_2和其子目录coco_3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mkdir</span> coco vivi jojo      <span class="comment">#在当前目录下创建3个目录 coco vivi jojo(以空格分开)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="16-创建空文本文件touch"><a href="#16-创建空文本文件touch" class="headerlink" title="16.创建空文本文件touch"></a>16.创建空文本文件touch</h2><p>touch：创建空文本文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> coco      <span class="comment">#在当前目录下创建coco文件</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">touch</span> /tmp/vivi     <span class="comment">#在指定目录/tmp下创建vivi文件</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="17-删除rm"><a href="#17-删除rm" class="headerlink" title="17.删除rm"></a>17.删除rm</h2><p>rm：删除；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf 文件名：删除文件（递归删除，r:递归，f ：强制）</span><br><span class="line"></span><br><span class="line">rmkdir:删除空目录</span><br><span class="line"></span><br><span class="line"><span class="built_in">rm</span> coco_2020    <span class="comment">#删除coco_2020文件</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">rm</span> -f ITester2020     <span class="comment">#直接删除ITester2020文件（无需确认）</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">rm</span> -f coco2021 vivi2021 ITester2021     <span class="comment">#同时删除多个文件（无需确认）</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">rm</span> /tmp/coco     <span class="comment">#删除指定目录/tmp下的文件coco</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">rm</span> co*    <span class="comment">#删除以co开头的文件</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">rmdir</span>   <span class="comment">#删除空目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">rm</span> -r coco    <span class="comment">#递归的方式删除非空目录coco</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">rm</span> -rf vivi    <span class="comment">#直接删除非空目录vivi(不用确认)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="18-创建文件或编辑vi"><a href="#18-创建文件或编辑vi" class="headerlink" title="18.创建文件或编辑vi"></a>18.创建文件或编辑vi</h2><p>vi:创建文件或编辑；</p>
-<p>(i进入编辑模式，退出编辑按ESC，q表示退出；w表示保存退出；q!表示强制退出；输入:不保存退出q!，保存退出 wq)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi coco    <span class="comment">#编辑coco文件</span></span><br><span class="line"></span><br><span class="line">vi /tmp/vivi     <span class="comment">#编辑指定目录/tem下的vivi文件</span></span><br></pre></td></tr></table></figure>
-
-<p>:w<br>#保存修改</p>
-<p>:q<br>#退出vi编辑器   </p>
-<p>:wq<br>#保存并退出</p>
-<p>:q!<br>#退出vi编辑器，不保存修改</p>
-<h2 id="19-复制文件或目录cp"><a href="#19-复制文件或目录cp" class="headerlink" title="19.复制文件或目录cp"></a>19.复制文件或目录cp</h2><p>cp：复制文件或目录；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> vivi /tmp     <span class="comment">#复制vivi文件到/tmp 目录下 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /tmp/vivi /home     <span class="comment">#复制/tmp/vivi 文件到/home 目录下</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> /home/vivi /tmp/coco      <span class="comment">#复制/home/vivi 到/tmp 目录下并改名为 coco</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cp</span> -p /tmp/coco /home     <span class="comment">#复制/tmp/coco到/home目录下并复制文件属性</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="20-移动文件或目录mv"><a href="#20-移动文件或目录mv" class="headerlink" title="20.移动文件或目录mv"></a>20.移动文件或目录mv</h2><p>mv：移动文件或目录；</p>
-<p>改名必须满足：目标位置和源位置必须相同才可以，然后文件名必须不同</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> coco_2020 /tmp   <span class="comment">#移动coco_2020文件到/tmp 目录下</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /home/coco /tmp      <span class="comment">#移动/home/coco文件到/tmp目录下</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> /home/coco /tmp/ITester      <span class="comment">#移动/home/coco 文件到/tmp目录下并改名为ITester</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> ITester ITester2020        <span class="comment">#将ITester文件改名为ITester2020</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> ITester202003 /tmp     <span class="comment">#移动目录到/tmp下</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">mv</span> jojo hoho         <span class="comment">#将jojo目录改名为hoho</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="21-查看文件的前几行head"><a href="#21-查看文件的前几行head" class="headerlink" title="21.查看文件的前几行head"></a>21.查看文件的前几行head</h2><p>head:查看文件的前几行</p>
-<p>-n 后面接数字，表示查看前几行（也可以不加， 默认查看 文件前10 行 ） </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">head</span> -5   <span class="comment">#查看前5行内容</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="22-查看文件的后几行-tail"><a href="#22-查看文件的后几行-tail" class="headerlink" title="22.查看文件的后几行 tail"></a>22.查看文件的后几行 tail</h2><p>tail ：查看文件的后几行 </p>
-<p>-n 后面接数字，表示查看几行（也可以不加， 默认查看文件后10 行 ）  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">tail</span> -5 /etc/passwd    <span class="comment">#查看后5行内容</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="23-查看当前文档内容less"><a href="#23-查看当前文档内容less" class="headerlink" title="23.查看当前文档内容less"></a>23.查看当前文档内容less</h2><p>less ：查看当前文档内容；</p>
-<p>相比 cat，less 可以实现上下翻页等功能 ；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">less coco.txt   <span class="comment">#查看coco.txt</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="24-分页展示more"><a href="#24-分页展示more" class="headerlink" title="24.分页展示more"></a>24.分页展示more</h2><p>more：分页展示；</p>
-<p>不能回退，灵活上不如 less ；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">more coco.txt     <span class="comment">#分页查看coco.txt</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="25-更改目录和文件权限值chmod"><a href="#25-更改目录和文件权限值chmod" class="headerlink" title="25.更改目录和文件权限值chmod"></a>25.更改目录和文件权限值chmod</h2><p>chmod：更改目录和文件权限值</p>
-<p>-R 递归改变目录下所有子目录和文件的权限 </p>
-<p>r&#x3D;4 w&#x3D;2 x&#x3D;1 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 766 coco     <span class="comment">#将目录coco的权限更改为4+2+1 4+2 4+2</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">chmod</span> 777 vivi       <span class="comment">#将文件vivi的权限更改为 4+2+1 4+2+1 4+2+1</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="26-更改文件或目录的属组或属主chown"><a href="#26-更改文件或目录的属组或属主chown" class="headerlink" title="26.更改文件或目录的属组或属主chown"></a>26.更改文件或目录的属组或属主chown</h2><p>chown：更改文件或目录的属组或属主</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chown</span> usr coco    <span class="comment">#将当前目录下的coco目录的属主改为usr</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">chown</span> usr.gur vivi      <span class="comment">#将当前目录下的vivi目录的属主改为usr，属组改为gur</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="cl21yumsl0000awt7esg8f7vl" data-title="linux常用命令" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/linux/" style="font-size: 10px;">linux</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">linux常用命令</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+1who  #显示当前系统登录用户以及所登录的控制台 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux常用命令"/></a><div class="content"><a class="title" href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a><time datetime="2022-04-16T14:53:00.000Z" title="Created 2022-04-16 22:53:00">2022-04-16</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/linux/" style="font-size: 1.1em; color: #999">linux</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">April 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-04-16T15:28:30.799Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
