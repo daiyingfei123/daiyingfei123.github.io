@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>test文件</title>
+      <link href="/2022/04/17/test%E6%96%87%E4%BB%B6/"/>
+      <url>/2022/04/17/test%E6%96%87%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>这个文件用于测试给文章添加标签和分类。。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自动化测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+            <tag> test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>linux常用命令</title>
       <link href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
       <url>/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
