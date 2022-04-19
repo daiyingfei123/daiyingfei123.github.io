@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>phpstudy启动mysql成功后停止</title>
+      <link href="/2022/04/19/phpstudy%E5%90%AF%E5%8A%A8mysql%E6%88%90%E5%8A%9F%E5%90%8E%E5%81%9C%E6%AD%A2/"/>
+      <url>/2022/04/19/phpstudy%E5%90%AF%E5%8A%A8mysql%E6%88%90%E5%8A%9F%E5%90%8E%E5%81%9C%E6%AD%A2/</url>
+      
+        <content type="html"><![CDATA[<p>今天用phpstudy启动mysql时遇到问题，启动成功后又自动停止，查看日志发现只有一个警告：</p><p><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220419173712729.png" alt="image-20220419173712729"></p><p>这是因为之前安装的mysql服务没有删除干净，我的电脑服务里面还存在mysql服务，解决办法：管理员启动cmd输入<code>sc delete mysql</code>：</p><p><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220419173930670.png" alt="image-20220419173930670"></p><p>phpstudy再次启动mysql成功…</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mysql </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+            <tag> phpstudy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>test文件</title>
       <link href="/2022/04/17/test%E6%96%87%E4%BB%B6/"/>
       <url>/2022/04/17/test%E6%96%87%E4%BB%B6/</url>
