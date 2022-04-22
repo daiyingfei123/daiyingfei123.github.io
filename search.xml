@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>docker安装MySQL远程连接（阿里云服务器）</title>
+      <link href="/2022/04/22/docker%E5%AE%89%E8%A3%85MySQL%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%EF%BC%88%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%89/"/>
+      <url>/2022/04/22/docker%E5%AE%89%E8%A3%85MySQL%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%EF%BC%88%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p>1、docker创建并启动mysql容器</p><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><code class="hljs shell">root@iZ2ze4xuhkt8y4ejlnuo1lZ:/ # docker run -itd \<br>-p 3306:3306  \<br>--name=mysql \<br>-v /root/mysql/conf:/etc/mysql/conf.d  \<br>-v /root/mysql/logs:/logs \<br>-v /root/mysql/data:/var/lib/mysql \<br>-e MYSQL_ROOT_PASSWORD=123456 \<br>mysql:5.7<br></code></pre></td></tr></tbody></table></figure><ul><li>p 3306:3306   制定端口</li><li>-v /root/mysql/conf:/etc/mysql/conf.d 将容器中/etc/mysql/conf.d挂载到宿主机/root/mysql/conf.d</li><li>e MYSQL_ROOT_PASSWORD=123456  初始化root用户的密码</li></ul><p>2、查看进入容器</p><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><code class="hljs shell">root@iZ2ze4xuhkt8y4ejlnuo1lZ:~ # docker ps<br>CONTAINER ID   IMAGE       COMMAND                  CREATED             STATUS         PORTS                                                  NAMES<br>1f77b8a5078b   mysql:5.7   "docker-entrypoint.s…"   About an hour ago   Up 9 minutes   0.0.0.0:3306-&gt;3306/tcp, :::3306-&gt;3306/tcp, 33060/tcp   mysql<br>root@iZ2ze4xuhkt8y4ejlnuo1lZ:~ #<br>root@iZ2ze4xuhkt8y4ejlnuo1lZ:~ # docker exec -it mysql bash<br><br></code></pre></td></tr></tbody></table></figure><p>3、登录mysql开启远程访问</p><figure class="highlight shell"><table><tbody><tr><td class="code"><pre><code class="hljs shell">root@1f77b8a5078b:/# mysql -uroot -p123456<br><span class="hljs-meta prompt_">mysql&gt; </span><span class="language-bash">ALTER user <span class="hljs-string">'root'</span>@<span class="hljs-string">'%'</span> IDENTIFIED WITH mysql_native_password BY <span class="hljs-string">'123456'</span>;</span>  <br>Query OK, 0 rows affected (0.00 sec)<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">mysql&gt; </span><span class="language-bash"></span><br><span class="language-bash">mysql&gt; FLUSH PRIVILEGES;</span>  <br>Query OK, 0 rows affected (0.00 sec)<br></code></pre></td></tr></tbody></table></figure><p>4、开启服务器端口</p><p><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220422214651545.png" alt="image-20220422214651545"></p><p>5、本地连接</p><p><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220422214903939.png" alt="image-20220422214903939"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>TCP/IP协议以及三次握手、四次挥手</title>
       <link href="/2022/04/21/TCP-IP%E5%8D%8F%E8%AE%AE%E4%BB%A5%E5%8F%8A%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E3%80%81%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
       <url>/2022/04/21/TCP-IP%E5%8D%8F%E8%AE%AE%E4%BB%A5%E5%8F%8A%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E3%80%81%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</url>
