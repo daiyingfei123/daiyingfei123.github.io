@@ -1,0 +1,513 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>用例设计 | 你总会成熟起来.....</title><meta name="keywords" content="用例设计"><meta name="author" content="dai"><meta name="copyright" content="dai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="黑盒测试：不用关心底层代码逻辑的具体实现最常见的黑盒测试用例设计方法有： 黑盒测试用例设计： 一、等价类划分法（✨重点）1、原理 把程序的输入域划分为若干部分，然后从每个部分中选取少数代表性数据作为测试用例。 每一类的代表性数据在测试中的作用等价于这一类中的其他值，如果某一类中的一个例子发现了错误，这一等价类中的其他例子也能发现同样的错误 反之，如果某一类中的一个例子没有发现错误，这一类中的其他列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用例设计">
+<meta property="og:url" content="http://example.com/2022/04/28/%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:site_name" content="你总会成熟起来.....">
+<meta property="og:description" content="黑盒测试：不用关心底层代码逻辑的具体实现最常见的黑盒测试用例设计方法有： 黑盒测试用例设计： 一、等价类划分法（✨重点）1、原理 把程序的输入域划分为若干部分，然后从每个部分中选取少数代表性数据作为测试用例。 每一类的代表性数据在测试中的作用等价于这一类中的其他值，如果某一类中的一个例子发现了错误，这一等价类中的其他例子也能发现同样的错误 反之，如果某一类中的一个例子没有发现错误，这一类中的其他列">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/v2-9239f4596280b40bbe76fc1d8bd3dfbd_b.jpg">
+<meta property="article:published_time" content="2022-04-28T03:48:05.000Z">
+<meta property="article:modified_time" content="2022-04-28T03:54:20.713Z">
+<meta property="article:author" content="dai">
+<meta property="article:tag" content="用例设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/v2-9239f4596280b40bbe76fc1d8bd3dfbd_b.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://example.com/2022/04/28/%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '用例设计',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-28 11:54:20'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="D:/MyBlog/themes/butterfly/source/css/iconfont.css"><meta name="generator" content="Hexo 6.1.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/微信图片_20220417133947.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouyefill"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/python"><i class="fa-fw fa  fa-folder-open"></i><span> python</span></a></li><li><a class="site-page child" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96"><i class="fa-fw fa fa-folder-open"></i><span> 自动化</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/v2-9239f4596280b40bbe76fc1d8bd3dfbd_b.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">你总会成熟起来.....</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-shouyefill"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/python"><i class="fa-fw fa  fa-folder-open"></i><span> python</span></a></li><li><a class="site-page child" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96"><i class="fa-fw fa fa-folder-open"></i><span> 自动化</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">用例设计</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-28T03:48:05.000Z" title="发表于 2022-04-28 11:48:05">2022-04-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-28T03:54:20.713Z" title="更新于 2022-04-28 11:54:20">2022-04-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/">测试基础</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="用例设计"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><a href="">黑盒测试</a>：不用关心底层代码逻辑的具体实现<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/1d51916ea34c43998438b178eb2b61f4.png" alt="在这里插入图片描述" style="zoom:33%;">最常见的黑盒测试用例设计方法有：<img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/636c6278fc87495c8f512b506f767ad4.png" alt="在这里插入图片描述"></p>
+<p>黑盒测试用例设计：</p>
+<h3 id="一、等价类划分法（✨重点）"><a href="#一、等价类划分法（✨重点）" class="headerlink" title="一、等价类划分法（✨重点）"></a>一、等价类划分法（✨重点）</h3><h4 id="1、原理"><a href="#1、原理" class="headerlink" title="1、原理"></a>1、原理</h4><ul>
+<li>把程序的输入域划分为若干部分，然后从每个部分中选取少数代表性数据作为测试用例。</li>
+<li>每一类的代表性数据在测试中的作用等价于这一类中的其他值，如果某一类中的一个例子发现了错误，这一等价类中的其他例子也能发现同样的错误</li>
+<li>反之，如果某一类中的一个例子没有发现错误，这一类中的其他列子也不会查出错误</li>
+</ul>
+<h4 id="2、明确等价类划分法的原则（6条）"><a href="#2、明确等价类划分法的原则（6条）" class="headerlink" title="2、明确等价类划分法的原则（6条）"></a>2、明确等价类划分法的原则（6条）</h4><p>1️⃣在输入条件规定了取值范围或值的个数的情况下，可以确立一个有效等价类和两个无效等价类</p>
+<ul>
+<li><p>🌰：文本框可输入数据 6~18位      </p>
+</li>
+<li><p>在这个范围之内→  一个有效等价类  eg：10</p>
+</li>
+<li><p>在这个范围之外→  无效等价类   eg：4 、20</p>
+</li>
+</ul>
+<p>2️⃣ 在输入条件规定了输入值的集合或者规定了”必须如何”的条件的情况下，可以确立一个有效等价类和一个无效等价类</p>
+<ul>
+<li>🌰 ：请输入手机号11位，必须为11位</li>
+<li>有效等价类→11位数据</li>
+<li>无效等价类→非11位数据</li>
+</ul>
+<p>3️⃣ 在输入条件是一个布尔量的情况下，可确定一个有效等价类和一个无效等价类，“真”就是有效，“假”就是无效       </p>
+<ul>
+<li>🌰：方框内选取：阅读并接受《百度用户协议》及《百度隐私权保护声明》</li>
+<li>打勾为有效，不打勾为无效</li>
+</ul>
+<p>4️⃣ 在规定了输入数据的一组值（假定n个），并且程序要对每一个输入值分别处理的情况下，可确立n个有效等价类和一个无效等价类<br>5️⃣ 在规定了输入数据必须遵循的规则的情况下，可确立一个有效等价类（符合规则）和若干个无效等价类(从不同角度违反规则)</p>
+<p>​     </p>
+<ul>
+<li>🌰：用户名要求6-18位，由字母、数字、下划线组成</li>
+<li>此时无效等价类可以有若干个</li>
+</ul>
+<p>6️⃣ 在划分的等价类中，各元素在程序处理中的方式不同的情况下，则应在该等价类基础上进一步划分为更小的等价类就（由大化小）</p>
+<p>⚡注意事项</p>
+<p>==注意：测试用例不允许重复、不能缺失，越详细越好==</p>
+<p><strong>不允许这样设计</strong>：</p>
+<ul>
+<li>🌰：61012219990230204X → 存在错误。因为2月只有28或者29天</li>
+</ul>
+<p>身份证最后一位是校验码，0-9和X（10）</p>
+<p><code>（一条用例只能违反一个规则）</code></p>
+<p>【身份证号：18位，倒数第二位代表性别 （偶数→女生、奇数→男生）】</p>
+<h4 id="3-实例🌰："><a href="#3-实例🌰：" class="headerlink" title="3.实例🌰："></a>3.实例🌰：</h4><p>百度注册页面用例设计（用户名:中英文均可，最长14个英文或7个汉字）</p>
+<table>
+<thead>
+<tr>
+<th>有效等价类</th>
+<th>数据</th>
+<th>无效等价类</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>中英文混合</td>
+<td>心min月</td>
+<td>数字和特殊符号</td>
+<td>123&amp;%</td>
+</tr>
+<tr>
+<td>14个英文</td>
+<td>xinminyue</td>
+<td>超过14位</td>
+<td>xinminyuexinminyue</td>
+</tr>
+<tr>
+<td>7个中文</td>
+<td>心皿月</td>
+<td>超过7个</td>
+<td>心皿月心皿月心皿月</td>
+</tr>
+<tr>
+<td>不能为空</td>
+<td>心皿月</td>
+<td>空</td>
+<td></td>
+</tr>
+<tr>
+<td>不能重复</td>
+<td>皿月</td>
+<td>用户名重复（已经注册过）</td>
+<td>心皿月</td>
+</tr>
+</tbody></table>
+<h3 id="二、边界值分析法（✨重点）"><a href="#二、边界值分析法（✨重点）" class="headerlink" title="二、边界值分析法（✨重点）"></a>二、边界值分析法（✨重点）</h3><p>边界值是一个特定的数据。<br>例如，文本框需要输入6—18位字符，那么此时边界值为：6个字符、18个字符。<br>次边界：边界附近的值，按照系统规定的单位或计算方式，一般是一个数据的差异。</p>
+<h4 id="1、边界值的选择原则"><a href="#1、边界值的选择原则" class="headerlink" title="1、边界值的选择原则"></a>1、边界值的选择原则</h4><ul>
+<li>如果输入条件<strong>规定了值的范围</strong>，则应取刚达到这个范围的边界值，以及刚刚超越这个范围边界的值作为测试的输入数据</li>
+<li>如果输入条件<strong>规定了值的个数</strong>，则用最大个数，最小个数，比最小个数少1，比最大个数多1的数作为测试数据</li>
+<li>如果程序的规格说明给出的输入域或输出域是有序集合，则应选取集合的<strong>第一个元素</strong>和<strong>最后一个元素</strong>作为测试用例。</li>
+<li>如果程序中使用了一个内部数据结构，则应当选择这个内部数据结构边界上的值作为测试用例。</li>
+</ul>
+<p>📑思考题：</p>
+<p>（1）6≤X≤12，请问测试中x的边界值要选取哪几个进行测试？</p>
+<pre><code> `\5.  6 .  7.   11,12,13    【边界值加减1】`
+</code></pre>
+<p>（2）6&lt;X&lt;12，请问测试中x的边界值要选取哪几个进行测试？</p>
+<p>​    <code>此时的6和12是无效数据，应当做无效数据进行测试、     </code></p>
+<p>​    <code>6  7  8      10,11,12 【边界值加减1】</code></p>
+<p>（3）文本框输入字符的个数要求是不大于150字，测试时如何选择边界值。</p>
+<p>​     <code>0≤x≤150     测： 空，1， 149,150,151</code></p>
+<h3 id="三、因果图法"><a href="#三、因果图法" class="headerlink" title="三、因果图法"></a>三、因果图法</h3><h4 id="1-什么是因果图法"><a href="#1-什么是因果图法" class="headerlink" title="1.什么是因果图法"></a>1.什么是因果图法</h4><ul>
+<li>因果图是利用一种图解法分析输入的各种组合情况，从而设计测试用例的方法，</li>
+<li>它适用于检查程序条件的各种组合情况，</li>
+<li>适用于输入条件之间有相互制约、相互依赖的情况，</li>
+</ul>
+<p>特点：- 考虑输入条件相互制约及组合关系。–考虑输出条件对输入条件的依赖关系</p>
+<p>因果图法要注意考虑：</p>
+<ul>
+<li><p>所有的输入输出条件的相互制约关系以及组合关系</p>
+</li>
+<li><p>输出结果对输入条件的依赖关系。也就是什么样的输入组合会产生怎样的输出结果，即“因果关系”</p>
+</li>
+</ul>
+<p>🌰：注册QQ<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/02c39a5bc7ec42d6adaf45a1de4a87a0.png" title="" alt="在这里插入图片描述" data-align="center"></p>
+<h4 id="2-因果图"><a href="#2-因果图" class="headerlink" title="2.因果图"></a>2.因果图</h4><p>第1️⃣步：根据功能说明书中规定的<strong>原因和结果之间的关系</strong>画出因果图<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/f645f9835c174d838282c2f6744038ad.png" title="" alt="在这里插入图片描述" data-align="center"></p>
+<p>恒等关系：原因a成立，结果b一定成立<br>非：原因a成立，原因b一定不成立<br>或：原因a,b,c三者只要有一个成立，结果d就成立<br>与：原因a,b,c都成立时，结果d才成立</p>
+<p>第2️⃣步：根据功能说明在因果图中加上约束条件<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/ef90a5b3ca0d47a9baa84a6e9a9936b4.png" title="" alt="在这里插入图片描述" data-align="center"></p>
+<ul>
+<li>🌟其中互斥，包含，唯一，要求是对原因的约束，屏蔽是对结果的约束。</li>
+</ul>
+<p>互斥(exclusion)：表示不同时为1。即a,b,c中<strong>至多</strong>只有一个1<br>包含(include)：表示<strong>至少</strong>有一个1。即a,b,c中不同时为0<br>唯一(only)：表示a,b,c中<strong>有且仅有一个</strong>1<br>要求(request): 表示若a = 1,则b必须为1，即不可能a=1且b=0<br>屏蔽(mask)：表示若a=1,则b必须为0</p>
+<h4 id="3-实例🌰"><a href="#3-实例🌰" class="headerlink" title="3.实例🌰"></a>3.实例🌰</h4><p>阅读和分析功能说明书，识别出”原因”和”结果”，并加以编号<br>案例：有一个饮料自动售货机（处理单价为5角钱）的控制处理软件，它的软件规格说明书如下。<br>※ 若投入5角钱的硬币，按下”橙汁”或者”啤酒”的按钮，则相应的饮料就送出来。<br>※ 若投入1元钱的硬币，同样也是按”橙汁”或”啤酒”的按钮，则自动售货机在送出相应的饮料的同时退回5角钱的硬币。</p>
+<p>第1步：先分析原因和结果的关系，画出他们之间的关系图（部分关系连线）；按照需求描述原因、结果间的约束。<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/a0f2f49f738f43ffb618aa4b34f12d89.png" alt="在这里插入图片描述">第2步：列出所有原因和结果的列表，设计初步的测试用例步骤。（列表中的每一列都是一条测试用例）<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/667c891ae63b40769b6acdfc533307ef.png" alt="在这里插入图片描述">通过分析发现：<br>1）只选择饮料，没有投币的时候，软件没有任何结果<br>2)只投币，没有选择饮料的时候，软件也没有任何结果<br>==我们不能把软件的缺陷，设计成测试用例==<br>因果图的<strong>优势</strong>在于能够发现测试用例设计中存在的不足。</p>
+<p>这里就简单的写上两条测试用例：<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/420f00b7dc35466e9c2d6970497c6cd9.png" alt="在这里插入图片描述"></p>
+<h4 id="4-缺陷"><a href="#4-缺陷" class="headerlink" title="4.缺陷"></a>4.缺陷</h4><p>当原因和结果比较多时，他们之间的关系连线就会较多，导致因果图的可读性差。<br>因此适用于局部的小功能分析，原因结果关系不是很多的情况使用。</p>
+<h3 id="四、判定表驱动法"><a href="#四、判定表驱动法" class="headerlink" title="四、判定表驱动法"></a>四、判定表驱动法</h3><h4 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h4><p>判定表法是分析和表达多逻辑条件下执行不同操作的情况的工具，它由以下几个内容组成：</p>
+<ul>
+<li>条件桩: 列出了问题的所有条件，通常认为<strong>列出的条件的次序无关紧要</strong>。</li>
+<li>动作桩： 列出了问题规定可能采取的操作，<strong>这些操作的排列顺序没有约束</strong>。</li>
+<li>条件项：列出针对它左列条件的取值，在所有可能情况下的真假值。</li>
+<li>动作项:列出在条件项的各种取值情况下应该采取的动作。</li>
+</ul>
+<h4 id="2-使用场合和条件"><a href="#2-使用场合和条件" class="headerlink" title="2.使用场合和条件"></a>2.使用场合和条件</h4><p><strong>使用场合：</strong><br>主要适用于多条件的内容组合和条件分析。<br><strong>使用条件：</strong><br>所有的条件桩在表中的顺序和位置互不影响；<br>所有的动作桩内的顺序不会因为条件的顺序变化，而产生不同。</p>
+<h4 id="3-实现步骤"><a href="#3-实现步骤" class="headerlink" title="3.实现步骤"></a>3.实现步骤</h4><ul>
+<li>识别出操作条件（原因），和对应的动作（结果）</li>
+<li>分析条件的条件项（组合数量）：如果有n个条件，每个条件有成立和不成立两种情况，那么最后一共会有2^n个组合数量</li>
+<li>简化和优化结果，排除一些不可能存在的情况</li>
+</ul>
+<h4 id="4-实例🌰"><a href="#4-实例🌰" class="headerlink" title="4.实例🌰"></a>4.实例🌰</h4><p>问题要求：”……对功率大于50马力的机器、维修记录不全或已运行10年以上的机器，应给予优先的维修处理……” 。这里假定，“维修记录不全”和“优先维修处理”均已在别处有更严格的定义 。请建立判定表。</p>
+<p>解答：</p>
+<ol>
+<li><p>确定规则的个数：这里有3个条件，每个条件有两个取值，故应有2<em>2</em>2=8种规则。</p>
+</li>
+<li><p>列出所有的条件茬和动作桩</p>
+</li>
+<li><p>填入条件项。可从最后1行条件项开始，逐行向上填满。如第三行是： Y N Y N Y N Y N，第二行是： Y Y N N Y Y N N等等。 </p>
+</li>
+<li><p>填入动作桩和动作顶。这样便得到形如图的初始判定表。</p>
+</li>
+</ol>
+<p><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220428114402299.png" alt="image-20220428114402299"></p>
+<p>​                                          初始判定表</p>
+<ol start="5">
+<li>化简，合并相似规则后得到图。</li>
+</ol>
+<p><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/image-20220428114452721.png" alt="image-20220428114452721"></p>
+<p>原文：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lci05/p/3918346.html">转：lci05 - 博客园</a></p>
+<h4 id="5-适合使用判定表设计测试用例的条件："><a href="#5-适合使用判定表设计测试用例的条件：" class="headerlink" title="5.适合使用判定表设计测试用例的条件："></a>5.适合使用判定表设计测试用例的条件：</h4><p>规格说明以判定表的形式给出，或很容易转换成判定表<br>条件的排列顺序不影响执行哪些操作<br>规则的排列顺序不影响执行哪些操作<br>当某一规则的条件已经满足，并确定要执行的操作后，不必检验别的规则<br>如果某一规则要执行多个操作，这些操作的执行顺序无关紧要</p>
+<h4 id="6-优点"><a href="#6-优点" class="headerlink" title="6.优点"></a>6.优点</h4><p>能够将复杂的问题按照各种可能的情况全部列举出来，简明并且可以避免遗漏。</p>
+<h3 id="五、正交实验法"><a href="#五、正交实验法" class="headerlink" title="五、正交实验法"></a>五、正交实验法</h3><p>正交试验设计法是从大量的试验点中挑选出适量的、有代表性的点来进行测试，是研究多因素，多水平的一种设计方法。</p>
+<p>这些代表性的点具有“均匀分散、齐整可比”的特点。</p>
+<p>在一项试验中，把影响试验结果的量称为试验（因素）因子，简称<strong>因素</strong>。在试验过程中，每一个因素可以处于不同的状态或状况，把因素所处的状态或状况，称为因素的水平，简称<strong>水平</strong>。</p>
+<p>正交试验分析法包括以下常用术语：<br>（1）指标：通常把判断试验结果优劣的标准叫做试验的指标<br>（2）因子：是指所有影响试验指标的条件<br>（3）因子的状态：是指影响试验因子的因素，也称之为因子的水平<br>正交表的表示形式：Lr（mn）<br>（1）n表示因子数，正交表中列的个数<br>（2）m表示水平数，也称为状态，单个因子能取得的值最大个数<br>（3）r表示行数，正交表中行的数量，也是测试用例的个数</p>
+<h4 id="正交表的种类"><a href="#正交表的种类" class="headerlink" title="正交表的种类"></a>正交表的种类</h4><ul>
+<li>各列水平数均相同的正交表：行数r=(m-1)*n+1，这是等水平正交表如L4(23)，代表测试用例4=(2-1)*3+1</li>
+<li>混合水平正交表，对于非等水平的正交表，表示形式为Lr(mn,pq)，行数r=(m-1)*n+(p-1)*q+1</li>
+</ul>
+<h4 id="正交实现步骤"><a href="#正交实现步骤" class="headerlink" title="正交实现步骤"></a>正交实现步骤</h4><p>1、确定因素：这里的因素是指对软件运行结果有影响的原因（分析所有对结果有影响的因素）</p>
+<ul>
+<li><p>确定因素的取值范围或集合（该步是为步骤3做准备的）</p>
+</li>
+<li><p>因素的取值范围是指软件输入的取值范围或集合以及可用的硬件资源</p>
+</li>
+</ul>
+<p>2、确定每个因素的水平</p>
+<ul>
+<li><p>根据因素的取值范围或集合，采用等价类划分、边界值分析以及其他软件测试技术，在每个因素的取值范围或集合内挑选出有效等价类、无效等价类、正好等于、刚刚大于或刚刚小于边界值等有代表性的测试值</p>
+</li>
+<li><p><strong>加权筛选，生成因素分析表</strong></p>
+<p>计算各因子和状态的权值，删去一部分权值较小，即重要性较小的因子或状态，使最后生成的测试用例集缩减到允许范围。</p>
+<p>该步骤目的是要明确哪些输入和输入的取值是最需要进行组合的，这样可以压缩最后测试的组合数。</p>
+</li>
+</ul>
+<p>3、选择正交表（只有特定的因素数和水平数的组合才有对应的正交表，正交表的因素数和水平数一般要大于实际的因素数和水平数）</p>
+<ul>
+<li><p>根据确定的因素和水平，选择合适的正交表</p>
+</li>
+<li><p>如果没有合适的正交表可用或需要的测试用例个数太多，要对因素和水平进行调整</p>
+</li>
+</ul>
+<p>正交试验法的关键在于正交表的选取，可以按照以下原则进行选取：</p>
+<p>1、如果不同因子的状态数相同，比如有M个因子，每个因子N个状态，则最好选取M因子N状态的正交表，如果该正交表不存在，则逐步增加因子数，直到找到一个存在的正交表。</p>
+<p>2、如果不同因子的状态数不同，则先要确定正交表的状态数，确定的原则是看哪种状态数在各个因子中出现的最多，比如现在有4个因子，第1、2个因子有3状态，第3个因子有4状态，第4个因子有2状态，则由于状态数3出现次数最多，因此应该选择状态数为3的正交表。如果刚才说到的4个因子中第3个因子的状态数也是2，则出现状态数2、3均出现2次的情况，这种情况下应尽可能选择较大的值，也就是应该选3。正交表的状态数确定好了，下面就要确定正交表的因子数，这和不同因子的状态数相同的情况是类似的</p>
+<p>选择好正交表后需要将实际的因子和状态带入正交表，这个时候会出现：</p>
+<ol>
+<li><p>因子的状态数=正交表的状态数 这个时候直接替换即可。</p>
+</li>
+<li><p>因子的状态数&gt;正交表的状态数 这个时候需要先将多余的状态合并，带入正交表，然后展开即可。具体可看后面的案例2。</p>
+</li>
+<li><p>因子的状态数&lt;正交表的状态数 这个时候正交表中多出来的状态，用实际状态的任意值任意替换即可。</p>
+</li>
+</ol>
+<h3 id="六、场景法"><a href="#六、场景法" class="headerlink" title="六、场景法"></a>六、场景法</h3><h4 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h4><p>现在的软件几乎都是用事件触发控制流程的。测试时，可以生动地描绘出时间触发时的情景，有利于设计测试用例，同时使测试用例更容易理解和执行。</p>
+<h4 id="2-基本流、备选流"><a href="#2-基本流、备选流" class="headerlink" title="2.基本流、备选流"></a>2.基本流、备选流</h4><p>基本流：软件功能按照正确的事件流实现的一条正确流程。<strong>通常一个业务仅存在一个基本流，且基本流仅有一个起点和一个终点。</strong><br>备选流：除了基本流之外的各支流，包含多种不同的情况。<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/a0336b8dc47a431ba04f5d2f4f9dc815.png" alt="在这里插入图片描述"></p>
+<h4 id="3-设计用例步骤"><a href="#3-设计用例步骤" class="headerlink" title="3.设计用例步骤"></a>3.设计用例步骤</h4><ul>
+<li>根据说明，描述出程序的基本流及各项备选流</li>
+<li>根据基本流和各项备选流生成不同的场景</li>
+<li>对每一个场景生成相应的测试用例</li>
+<li>对生成的所有测试用例重新复审，去掉多余的测试用例</li>
+<li>测试用例确定后，对每一个测试用例确定测试数据值</li>
+</ul>
+<h4 id="4-适用场景"><a href="#4-适用场景" class="headerlink" title="4.适用场景"></a>4.适用场景</h4><p>用于解决业务流程清晰的系统或功能</p>
+<h4 id="5-实例🌰"><a href="#5-实例🌰" class="headerlink" title="5.实例🌰"></a>5.实例🌰</h4><p>ATM机取款流程<br>（1）基本流：<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/13ada5ef3ef94b559bd5c772f28c3bc7.png" alt="在这里插入图片描述">（2）包含了备选流的过程<br><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/22054a2182ac4bd0818f74dff5bacda9.png" alt="在这里插入图片描述"></p>
+<p>备选流：</p>
+<blockquote>
+<p>1 卡片不是银行卡<br>2 卡片不是银联的卡<br>3 密码输错一次<br>4 密码输错两次，第三次输入正确<br>5 密码输错三次，冻结账号或者吞卡<br>6 选择存款服务<br>7 选择查询服务<br>8 选择转账服务<br>9 选择修改密码服务<br>10 选择取款服务<br>11 账户取款金额达到取款机的当日取款上限</p>
+</blockquote>
+<p>场景设计：</p>
+<blockquote>
+<p>场景1： 基本流<br>场景2: 基本流 备选流5<br>场景3： 基本流 备选流4<br>场景4： 基本流 备选流1<br>场景5： 基本流 备选流2 备选流4</p>
+</blockquote>
+<p>设计测试用例：<br><strong>每一个场景都是一个测试用例</strong><br>以场景5为例：设计步骤</p>
+<blockquote>
+<p>1、插卡（先用学生卡）<br>2、换卡（银联卡），在进行插卡<br>3、输入密码（第一次输入错误）<br>4、再次输入密码（第二次输入错误）<br>5、第三次输入密码（输入正确）<br>6、选择服务——取款<br>7、选择取款金额——500<br>8、等待出钞<br>9、取卡</p>
+</blockquote>
+<h3 id="七、测试用例设计综合策略"><a href="#七、测试用例设计综合策略" class="headerlink" title="七、测试用例设计综合策略"></a>七、测试用例设计综合策略</h3><p>使用各种测试方法的综合策略：</p>
+<ol>
+<li><p>在任何情况下都必须使用边界值分析方法，经验表明用这种方法设计出测试用例发现程序错误的能力最强。】</p>
+</li>
+<li><p>必要时用等价类划分方法补充一些测试用例。</p>
+</li>
+<li><p>用错误推测法再追加一些测试用例。</p>
+</li>
+<li><p>对照程序逻辑，检查已设计出的测试用例的逻辑覆盖程度，如果没有达到要求的覆盖标准，应当再补充足够的测试用例。</p>
+</li>
+<li><p>如果程序的功能说明中含有输入条件的组合情况，则一开始就可选用因果图法。</p>
+</li>
+</ol>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_49129184/article/details/123825090">https://blog.csdn.net/qq_49129184/article/details/123825090</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">dai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/04/28/%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1/">http://example.com/2022/04/28/用例设计/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">你总会成熟起来.....</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1/">用例设计</a></div><div class="post_share"><div class="social-share" data-image="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/v2-9239f4596280b40bbe76fc1d8bd3dfbd_b.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/04/22/docker%E5%AE%89%E8%A3%85MySQL%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%EF%BC%88%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%89/"><img class="next-cover" src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/v2-f214f95c10fa518ccfbbe74cbeaf1345_180x120.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">docker安装MySQL远程连接（阿里云服务器）</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/微信图片_20220417133947.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">dai</div><div class="author-info__description">dai</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/" target="_blank" title="首页图标"><i class="iconfont icon-shouyefill"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">网站初建，内容正在积极建设中......</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AD%89%E4%BB%B7%E7%B1%BB%E5%88%92%E5%88%86%E6%B3%95%EF%BC%88%E2%9C%A8%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">一、等价类划分法（✨重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%8E%9F%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">1、原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E6%98%8E%E7%A1%AE%E7%AD%89%E4%BB%B7%E7%B1%BB%E5%88%92%E5%88%86%E6%B3%95%E7%9A%84%E5%8E%9F%E5%88%99%EF%BC%886%E6%9D%A1%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">2、明确等价类划分法的原则（6条）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AE%9E%E4%BE%8B%F0%9F%8C%B0%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">3.实例🌰：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%BE%B9%E7%95%8C%E5%80%BC%E5%88%86%E6%9E%90%E6%B3%95%EF%BC%88%E2%9C%A8%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">二、边界值分析法（✨重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E8%BE%B9%E7%95%8C%E5%80%BC%E7%9A%84%E9%80%89%E6%8B%A9%E5%8E%9F%E5%88%99"><span class="toc-number">2.1.</span> <span class="toc-text">1、边界值的选择原则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%9B%A0%E6%9E%9C%E5%9B%BE%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">三、因果图法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%A0%E6%9E%9C%E5%9B%BE%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">1.什么是因果图法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%9B%A0%E6%9E%9C%E5%9B%BE"><span class="toc-number">3.2.</span> <span class="toc-text">2.因果图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AE%9E%E4%BE%8B%F0%9F%8C%B0"><span class="toc-number">3.3.</span> <span class="toc-text">3.实例🌰</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E7%BC%BA%E9%99%B7"><span class="toc-number">3.4.</span> <span class="toc-text">4.缺陷</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%A4%E5%AE%9A%E8%A1%A8%E9%A9%B1%E5%8A%A8%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">四、判定表驱动法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%A6%82%E5%BF%B5"><span class="toc-number">4.1.</span> <span class="toc-text">1.概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8%E5%9C%BA%E5%90%88%E5%92%8C%E6%9D%A1%E4%BB%B6"><span class="toc-number">4.2.</span> <span class="toc-text">2.使用场合和条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="toc-number">4.3.</span> <span class="toc-text">3.实现步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%AE%9E%E4%BE%8B%F0%9F%8C%B0"><span class="toc-number">4.4.</span> <span class="toc-text">4.实例🌰</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E9%80%82%E5%90%88%E4%BD%BF%E7%94%A8%E5%88%A4%E5%AE%9A%E8%A1%A8%E8%AE%BE%E8%AE%A1%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E7%9A%84%E6%9D%A1%E4%BB%B6%EF%BC%9A"><span class="toc-number">4.5.</span> <span class="toc-text">5.适合使用判定表设计测试用例的条件：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E4%BC%98%E7%82%B9"><span class="toc-number">4.6.</span> <span class="toc-text">6.优点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%AD%A3%E4%BA%A4%E5%AE%9E%E9%AA%8C%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">五、正交实验法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E4%BA%A4%E8%A1%A8%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">5.1.</span> <span class="toc-text">正交表的种类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E4%BA%A4%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="toc-number">5.2.</span> <span class="toc-text">正交实现步骤</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%9C%BA%E6%99%AF%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text">六、场景法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8E%9F%E7%90%86"><span class="toc-number">6.1.</span> <span class="toc-text">1.原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%9F%BA%E6%9C%AC%E6%B5%81%E3%80%81%E5%A4%87%E9%80%89%E6%B5%81"><span class="toc-number">6.2.</span> <span class="toc-text">2.基本流、备选流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%AE%BE%E8%AE%A1%E7%94%A8%E4%BE%8B%E6%AD%A5%E9%AA%A4"><span class="toc-number">6.3.</span> <span class="toc-text">3.设计用例步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">6.4.</span> <span class="toc-text">4.适用场景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%AE%9E%E4%BE%8B%F0%9F%8C%B0"><span class="toc-number">6.5.</span> <span class="toc-text">5.实例🌰</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1%E7%BB%BC%E5%90%88%E7%AD%96%E7%95%A5"><span class="toc-number">7.</span> <span class="toc-text">七、测试用例设计综合策略</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/28/%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1/" title="用例设计"><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/v2-9239f4596280b40bbe76fc1d8bd3dfbd_b.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="用例设计"/></a><div class="content"><a class="title" href="/2022/04/28/%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1/" title="用例设计">用例设计</a><time datetime="2022-04-28T03:48:05.000Z" title="发表于 2022-04-28 11:48:05">2022-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/22/docker%E5%AE%89%E8%A3%85MySQL%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%EF%BC%88%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%89/" title="docker安装MySQL远程连接（阿里云服务器）"><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/v2-f214f95c10fa518ccfbbe74cbeaf1345_180x120.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker安装MySQL远程连接（阿里云服务器）"/></a><div class="content"><a class="title" href="/2022/04/22/docker%E5%AE%89%E8%A3%85MySQL%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%EF%BC%88%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%89/" title="docker安装MySQL远程连接（阿里云服务器）">docker安装MySQL远程连接（阿里云服务器）</a><time datetime="2022-04-22T13:36:50.000Z" title="发表于 2022-04-22 21:36:50">2022-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/21/TCP-IP%E5%8D%8F%E8%AE%AE%E4%BB%A5%E5%8F%8A%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E3%80%81%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" title="TCP/IP协议以及三次握手、四次挥手"><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/tcp-ip.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TCP/IP协议以及三次握手、四次挥手"/></a><div class="content"><a class="title" href="/2022/04/21/TCP-IP%E5%8D%8F%E8%AE%AE%E4%BB%A5%E5%8F%8A%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E3%80%81%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" title="TCP/IP协议以及三次握手、四次挥手">TCP/IP协议以及三次握手、四次挥手</a><time datetime="2022-04-21T01:32:45.000Z" title="发表于 2022-04-21 09:32:45">2022-04-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/19/phpstudy%E5%90%AF%E5%8A%A8mysql%E6%88%90%E5%8A%9F%E5%90%8E%E5%81%9C%E6%AD%A2/" title="phpstudy启动mysql成功后停止"><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/mysql.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="phpstudy启动mysql成功后停止"/></a><div class="content"><a class="title" href="/2022/04/19/phpstudy%E5%90%AF%E5%8A%A8mysql%E6%88%90%E5%8A%9F%E5%90%8E%E5%81%9C%E6%AD%A2/" title="phpstudy启动mysql成功后停止">phpstudy启动mysql成功后停止</a><time datetime="2022-04-19T09:27:55.000Z" title="发表于 2022-04-19 17:27:55">2022-04-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令"><img src="https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/R-C.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux常用命令"/></a><div class="content"><a class="title" href="/2022/04/16/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a><time datetime="2022-04-16T14:53:00.000Z" title="发表于 2022-04-16 22:53:00">2022-04-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://typora-img-dai.oss-cn-hangzhou.aliyuncs.com/typora-img/M4(K13SRG1NQ~@[W{M_AIW1.png')"><div id="footer-wrap"><div class="copyright">&copy;2022 By dai</div><div class="footer_custom_text">Hi，welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'r6LelrxsUp3NHHiKHNU1hUQ3-gzGzoHsz',
+      appKey: '3N687hjj27F0KU9HlMdwwUbU',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
